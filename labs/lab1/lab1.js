@@ -5,12 +5,26 @@ function setup() {
     rect(x,0,30,100);
 }
 
-let r=0;
+let r=1;
+let t=0;
 let y=0;
 let z=0;
 function draw() {
     y++;
-    r++;
+
+    if(t==0){
+        r++;
+    }
+    if(t==1){
+        r--;
+    }
+    if(r==780){
+        t=1;
+    }
+    if(r==0){
+        t=0;
+    }
+
     if(y==60){
         y=0;
         z++;
