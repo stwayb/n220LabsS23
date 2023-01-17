@@ -1,5 +1,11 @@
 function setup() {
-    CreateCanvas(800,600);
+    createCanvas(800,600);
     
-    rect(100,0,30,100);
+    let x =500;
+    rect(x,0,30,100);
 }
+
+function draw() {
+    rect(mouseX,mouseY,20,20)
+}
+
