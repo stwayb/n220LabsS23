@@ -77,5 +77,6 @@ function draw() {
     if(t==1){
         square(r,10,10,5,0,0,0);
     }
+    
 }
 
