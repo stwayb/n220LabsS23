@@ -161,9 +161,37 @@ function draw() {
                 bY = 700;
             }
 
+            if(a1alive==0&&a2alive==0&&a3alive==0){
+                start=2;
+            }
+
+
         }
     }   
 
+    else if(start==2){
+        background(0,0,0);
+        textSize(60);
+        fill(255,255,255)
+        textFont('Georgia');
+        textStyle(NORMAL);
+        text('Congrats!', 70,300);
+        textSize(30);
+        text('You have beat the game', 40, 360);
+        text('Press R to restart', 80, 390);
+
+        x = 180;
+        y = 700;
+
+        a1alive = 1;
+        a2alive = 1;
+        a3alive = 1;    
+
+        if(keyIsDown(82)){
+            start=0;
+        }
+    }
+    
 
 
 }
