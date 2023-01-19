@@ -8,6 +8,7 @@ let t=0;
 let y=0;
 let z=0;
 let j=0;
+let b=1;
 function draw() {
 //counts the frames
     y++;
@@ -20,10 +21,10 @@ function draw() {
     if(t==1){
         r--;
     }
-    if(r==770){
+    if(r>=770){
         t=1;
     }
-    if(r==0){
+    if(r<=0){
         t=0;
     }
 
@@ -31,12 +32,14 @@ function draw() {
     if(y==60&&t==0){
         y=0;
         z++;
+        b=1;
     }
 
 //Tells the color changer to change color every time y hits 60
     if(y==60&&t==1){
         y=0;
         j++;
+        b=1;
     }
 
 //Cycles between cyan and pink if car is moving right
@@ -76,6 +79,18 @@ function draw() {
 
     if(t==1){
         square(r,10,10,5,0,0,0);
+    }
+
+//Click to turn car once a second
+    if(mouseIsPressed){
+        if(t==0&&b==1){
+            t=1;
+            b=0;
+        }
+        else if(t==1&&b==1){
+            t=0;
+            b=0;
+        }
     }
     
 }
