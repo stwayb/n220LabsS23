@@ -1,6 +1,3 @@
-/* Algorithm Check - The goal of this project is to create a program that keeps a ball bouncing around in a box.
-I plan on doing this by checking where the ball is and changing it depending on if it is over the border or not */
-
 
 // Ball position
 let x=0;
