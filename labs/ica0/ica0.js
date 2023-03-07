@@ -32,6 +32,8 @@ function login(){
             p=pass.value;
             user.value="";
             pass.value="";
+            user.style.borderColor="";
+            pass.style.borderColor="";
         }
     }
     else{
