@@ -1,17 +1,14 @@
 let out=document.getElementById("out");
 let txt=document.getElementById("text");
-let char;
+let vowels=["a","e","i","o","u","A","E","I","O","U"];
 function noVowel(){
     let word=out.value;
-    console.log(word);
     for(let x=0;x<word.length;x++){
-        if(word[x]=="a"||word[x]=="e"||word[x]=="i"||word[x]=="o"||word[x]=="u"||word[x]=="y"){
-            char=word.slice(x,x+1)
-            console.log(word.slice(x,x+1))
-            word.replace(char,"AAAAAAAA")
+        for(let y=0;y<vowels.length;y++){
+            if(word[x]==vowels[y]){
+                word=word.replace(word.substring(x,1+x),"")
+            }
         }
     }
-
     txt.innerHTML=word;
-
 }
