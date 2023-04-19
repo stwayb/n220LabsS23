@@ -35,18 +35,16 @@ function draw() {
         fill(255,255,255)
         textFont('Georgia');
         textStyle(NORMAL);
-        text('Space Fighter', 20,300);
-        textStyle(BOLDITALIC);
-        text('Z', 170, 360);
+        text('Space', 120,300);
+        text('Fighters', 100, 360);
 
         textSize(30);
         textStyle(NORMAL);
-        text('Press ENTER to start!', 50, 500);
+        text('Click Me To Start!', 75, 500);
 
         if(keyIsDown(13)){
             start=1;
         }
-
     }
 
     else if(start==1){
@@ -191,7 +189,10 @@ function draw() {
             start=0;
         }
     }
-    
+}
 
-
+function mouseClicked(){
+    if(mouseX>=200&&mouseX<=100&&mouseY>=100&&mouseY<=300){
+        start=1;
+    }
 }
