@@ -42,7 +42,7 @@ function mouseClicked() {
 function draw() {
 
 
-    //Starting Screen
+    //Starting Screen!
 
     if (start==0){
         background(0,0,0);
