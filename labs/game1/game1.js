@@ -26,9 +26,20 @@ function setup() {
     createCanvas(400, 800);
 }
 
+function mouseClicked() {
+    console.log("click")
+    console.log(mouseX);
+    console.log(mouseY);
+    if ((mouseX<=350&&mouseX>=50)&&(mouseY>=480&&mouseY<=500)) {
+        console.log("click Start")
+        start=1;
+    }
+}
+
 function draw() {
 
     //Starting Screen
+
     if (start==0){
         background(0,0,0);
         textSize(60);
@@ -41,7 +52,7 @@ function draw() {
 
         textSize(30);
         textStyle(NORMAL);
-        text('Press ENTER to start!', 50, 500);
+        text('Click here to start!', 70, 500);
 
         if(keyIsDown(13)){
             start=1;
