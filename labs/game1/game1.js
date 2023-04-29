@@ -58,6 +58,10 @@ function draw() {
         textStyle(NORMAL);
         text('Click here to start!', 70, 500);
 
+        textSize(18);
+        textStyle(NORMAL);
+        text('A and D to move, Space to shoot', 70, 600);
+
         if(keyIsDown(13)){
             start=1;
         }
