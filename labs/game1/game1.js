@@ -18,6 +18,9 @@ let a1 = aX;
 let a2 = aX +100;
 let a3 = aX -100;
 
+let counter=0;
+let counter2=false;
+
 let a1alive = 1;
 let a2alive = 1;
 let a3alive = 1;
@@ -37,6 +40,7 @@ function mouseClicked() {
 }
 
 function draw() {
+
 
     //Starting Screen
 
@@ -61,6 +65,44 @@ function draw() {
     }
 
     else if(start==1){
+
+        a1 = aX;
+        a2 = aX +100;
+        a3 = aX -100;
+
+        if(counter2==false){
+            if (counter<=50){
+                if (counter<=50){
+                    aX+=1;
+                }
+                else{
+                    aX-=1;
+                }
+                if(counter%10==0){console.log(aX)}
+                counter++;
+            }
+            else{
+                counter=0;
+                counter2=true;
+            }
+        }
+        else{
+            if (counter<=200){
+                if (counter<=100){
+                    aX-=1;
+                }
+                else{
+                    aX+=1;
+                }
+                if(counter%10==0){console.log(aX)}
+                counter++;
+            }
+            else{
+                counter=0;
+            }
+        }
+
+
 
         frame++;
         background(0, 0, 0);
