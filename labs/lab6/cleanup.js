@@ -5,7 +5,7 @@ let txt=document.getElementById("text");
 
 
 //function running on button press
-function clean(){
+/* function clean(){
     //gets the current word as a variable
     let word=out.value;
 
@@ -17,5 +17,11 @@ function clean(){
     }
 
     //changes the div to the new word
+    txt.innerHTML=word;
+}   */
+
+function clean(){
+    let word = out.value;
+    word.replace("#","");
     txt.innerHTML=word;
 }
