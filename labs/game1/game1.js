@@ -13,10 +13,10 @@ let shot = 0;
 let shotY = 0
 let shotX = 0;
 
-let aX = 200;
-let a1 = aX;
-let a2 = aX +100;
-let a3 = aX -100;
+let aliens ={x:200}
+let a1 = aliens.x;
+let a2 = aliens.x +100;
+let a3 = aliens.x -100;
 
 let counter=0;
 let counter2=false;
@@ -70,19 +70,19 @@ function draw() {
 
     else if(start==1){
 
-        a1 = aX;
-        a2 = aX +100;
-        a3 = aX -100;
+        a1 = aliens.x;
+        a2 = aliens.x +100;
+        a3 = aliens.x -100;
 
         if(counter2==false){
             if (counter<=50){
                 if (counter<=50){
-                    aX+=1;
+                    aliens.x+=1;
                 }
                 else{
-                    aX-=1;
+                    aliens.x-=1;
                 }
-                if(counter%10==0){console.log(aX)}
+                if(counter%10==0){console.log(aliens.x)}
                 counter++;
             }
             else{
@@ -93,12 +93,12 @@ function draw() {
         else{
             if (counter<=200){
                 if (counter<=100){
-                    aX-=1;
+                    aliens.x-=1;
                 }
                 else{
-                    aX+=1;
+                    aliens.x+=1;
                 }
-                if(counter%10==0){console.log(aX)}
+                if(counter%10==0){console.log(aliens.x)}
                 counter++;
             }
             else{
