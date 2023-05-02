@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #start{
+            display: inline-block;
+        }
+        #title{
+            display: inline-block;
+        }
+        #cardSps{
+            display: inline-block;
+        }
+        #cardDps{
+            display: inline-block;
+        }
+        #spacer{
+            width: 1250px;
+            display: inline-block;
+        }
+        #spacer2{
+            width: 600px;
+            display: inline-block;
+        }
+        .suitPs{
+            display: inline-block;
+            vertical-align:text-bottom;
+            text-align: center;
+            width: 150px;
+            height: 225px;
+            font-size: 100px;
+            background-color: rgb(173, 173, 173);
+            margin: 15px;
+        }
+        .drawPs{
+            display: inline-block;
+            vertical-align:text-bottom;
+            text-align: center;
+            width: 150px;
+            height: 225px;
+            font-size: 45px;
+            margin: 15px;
+            background-color: rgb(173, 173, 173);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Solitaire</h1>
+    <button id="start"onclick="start()">Start</button>
+    <br>
+    <h2 id="cardSps">Suit Piles</h2> <div id="spacer"></div><h2 id="cardDps">Draw Piles</h2>
+    <br>
+    <div class="suitPs" id="suit1" data-value="" data-suit="♥">♥</div>
+    <div class="suitPs" id="suit2" data-value="" data-suit="♦">♦</div>
+    <div class="suitPs" id="suit3" data-value="" data-suit="♣">♣</div>
+    <div class="suitPs" id="suit4" data-value="" data-suit="♠">♠</div>
+    <div id="spacer2"></div>
+    <div class="drawPs" id="draw1" data-value="" data-suit="">Draw Pile</div>
+    <div class="drawPs" id="draw2" data-value="" data-suit="">Click to Draw</div>
+    <br>
+    <script src="solitaire.js"></script>
+</body>
+</html>
